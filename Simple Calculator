@@ -1,0 +1,17 @@
+#use space after every number and operator like 10 + 20
+a=input("enter the caluculation")
+b=tuple(a.split(" "))
+
+num1, o, num2 =b
+if o=="+":
+    print(float(num1)+float(num2))
+elif o=="-":
+    print(float(num1)-float(num2))
+elif o=="*":
+    print(float(num1)*float(num2))
+elif o=="/":
+    print(float(num1)/float(num2))
+elif o=="//":
+    print(float(num1)//float(num2))
+elif o=="**":
+    print(float(num1)**float(num2))
