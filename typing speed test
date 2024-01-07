@@ -1,0 +1,27 @@
+import time as t
+import random as r
+def type_test():
+  sampletxt=["The quick brown fox jumps over the lazy dog","Pack my box with five dozen liquor jugs","The quick onyx goblin jumps over the lazy dwarf","How razorback jumping frogs can level six piqued gymnasts"]
+  def wpm(t_time,num_of_char):
+    word=num_of_char/5
+    minute=t_time/60
+    wpm=word/minute
+    return wpm
+  sentence=r.choice(sampletxt)
+  print("your sentence is")
+  print(sentence)
+  s_time=t.time()
+  u_input=input()
+  e_time=t.time()
+  t_time=e_time-s_time
+  if u_input==sentence :
+    speed_test=wpm(t_time, len(sentence))
+    print(f"the time taken is {round(t_time,2)}")
+    print(f"the wpm velocity is {round(speed_test,2)}")
+  else:
+    print("!!!!!!start again you have entered wrong sentence!!!!!\n")
+type_test()
+print("wanna try again??? please type as yes and hit enter \n if no type as no and hit the enter")
+z=input()
+if z=="yes" or z=="YES" or z=="Yes":
+  type_test()
