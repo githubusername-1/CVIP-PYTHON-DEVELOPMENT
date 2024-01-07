@@ -1,0 +1,10 @@
+import sounddevice as s
+from scipy.io.wavfile import write
+import wavio as w
+filename=input("enter file name with .wav extension :")
+frequency = 44100
+duration = int(input("enter the duration of the recording in seconds: "))
+record = s.rec(int(duration * frequency),samplerate=frequency, channels=2)
+s.wait()
+write("recording0.wav", frequency, record)
+w.write(filename, record, frequency, sampwidth=2)
